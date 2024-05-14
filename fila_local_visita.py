@@ -33,7 +33,7 @@ def datos(año_cambio):
     fila_match = match_data.loc[(match_data['AÑO'] == año)]
 
     headers = ['AÑO', 'LOCAL_EQUIPO', 'LOCAL_VICTORIAS', ' LOCAL_DERROTAS', ' LOCAL_EMPATES', ' LOCAL_GOL', 'LOCAL_GOL_HT  ', 'LOCAL_AMARILLA ', 'LOCAL_ROJA', 'LOCAL_TIRO_ARCO',
-               'VISITA_EQUIPO', 'VISITA_VICTORIAS', ' VISITA_DERROTAS', ' VISITA_EMPATES', ' VISITA_GOL', 'VISITA_GOL_HT  ', 'VISITA_AMARILLA ', 'VISITA_ROJA', 'VISITA_TIRO_ARCO']
+               'VISITA_EQUIPO', 'VISITA_VICTORIAS', ' VISITA_DERROTAS', ' VISITA_EMPATES', ' VISITA_GOL', 'VISITA_GOL_HT  ', 'VISITA_AMARILLA ', 'VISITA_ROJA', 'VISITA_TIRO_ARCO', 'RESULTADO']
     new_csv = [headers]
 
     for index, row in fila_match.iterrows():
@@ -51,7 +51,7 @@ def datos(año_cambio):
             [visita] + fila_visita.iloc[0].tolist() + [resultado]
         new_csv.append(new_row)
     # Ruta del archivo CSV de salida
-    csv_file_path = str(año) + ".csv"
+    csv_file_path = "./data_final_final/" + str(año) + ".csv"
 
     # Escribir las filas en el archivo CSV
     with open(csv_file_path, mode='w', newline='') as file:
