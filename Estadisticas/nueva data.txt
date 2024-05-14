@@ -1,0 +1,46 @@
+Variables que vienen en la data: 
+- FECHA
+- EQUIPO_LOCAL
+- EQUIPO_VISITA
+- LOCAL_GOL
+- VISITA_GOL
+- RESULTADO_FINAL
+- LOCAL_GOL_HT
+- VISITA_GOL_MT
+- RESULTADO_MT
+- ARBITRO
+- LOCAL_TIRO
+- VISITA_TIRO
+- LOCAL_TIRO_ARCO
+- VISITA_TIRO_ARCO
+- LOCAL_FALTA
+- VISITA_FALTA
+- LOCAL_CORNER
+- VISITA_CORNER
+- LOCAL_AMARILLA
+- VISITA_AMARILLA
+- LOCAL_ROJA
+- VISITA_ROJA
+
+Variables que se crean a partir de las anteriores: 
+- Temporada (año) (✅)
+- Equipo (✅)
+- Local o visita (✅)
+- Cantidad de veces que ganó (✅)
+- Cantidad de veces que perdió (✅)
+- Cantidad de veces que empató (✅)
+- Goles acumulados (✅)
+- Goles acumulados en el primer tiempo (✅)
+- Goles acumulados en el segundo tiempo
+- Tarjetas amarillas acumuladas (✅)
+- Tarjetas rojas acumuladas (✅)
+- Tiros al arco acumulados (✅)
+- Equipo que más le ganó
+- Equipo con el que más perdió
+- Equipo con el que más empató
+- Arbitro con el que más ganó
+- Arbitro con el que más perdió
+
+Pasos a seguir:
+1. Hacer las filas juntando local y visita
+2. A la fila hay que agregar quien ganó, en base al dataset antiguo
