@@ -27,6 +27,8 @@ def getStatistics(local, visita, año):
 
 match_data = pd.read_csv("./Estadisticas/datos_combinados.csv", delimiter=",")
 
+
+# CAMBIAR PARA CREAR NUEVO CSV
 año = 2004
 fila_match = match_data.loc[(match_data['AÑO'] == año)]
 
