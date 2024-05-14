@@ -42,17 +42,19 @@ for index, row in fila_match.iterrows():
 
     fila_local, fila_visita = getStatistics(local, visita, año)
 
-    new_row = [año, local, fila_local['VICTORIAS'], fila_local['DERROTAS'], fila_local['EMPATES'], fila_local['LOCAL_GOL'], fila_local['LOCAL_GOL_HT'], fila_local['LOCAL_AMARILLA'], fila_local['LOCAL_ROJA'], fila_local['LOCAL_TIRO_ARCO'],
-               visita, fila_visita['VICTORIAS'], fila_visita['DERROTAS'], fila_visita['EMPATES'], fila_visita['VISITA_GOL'], fila_visita['VISITA_GOL_HT'], fila_visita['VISITA_AMARILLA'], fila_visita['VISITA_ROJA'], fila_visita['VISITA_TIRO_ARCO'], resultado]
-    # new_csv.append(new_row)
+    new_row = [año, local, fila_local['VICTORIAS'].tolist(), fila_local['DERROTAS'].tolist(), fila_local['EMPATES'].tolist(), fila_local['LOCAL_GOL'].tolist(), fila_local['LOCAL_GOL_HT'].tolist(),  fila_local['LOCAL_AMARILLA'].tolist(), fila_local['LOCAL_ROJA'].tolist(), fila_local['LOCAL_TIRO_ARCO'].tolist(),
+               visita, fila_visita['VICTORIAS'].tolist(), fila_visita['DERROTAS'].tolist(), fila_visita['EMPATES'].tolist(), fila_visita['VISITA_GOL'].tolist(), fila_visita['VISITA_GOL_HT'].tolist(), fila_visita['VISITA_AMARILLA'].tolist(), fila_visita['VISITA_ROJA'].tolist(), fila_visita['VISITA_TIRO_ARCO'].tolist(), resultado]
+
+    # print(fila_local['VICTORIAS'].values)
+    new_csv.append(new_row)
 
 # Ruta del archivo CSV de salida
-# csv_file_path = str(año) + ".csv"
+csv_file_path = str(año) + ".csv"
 
 # Escribir las filas en el archivo CSV
-# with open(csv_file_path, mode='w', newline='') as file:
-#     writer = csv.writer(file)
-#     for row in new_csv:
-#         writer.writerow(row)
+with open(csv_file_path, mode='w', newline='') as file:
+    writer = csv.writer(file)
+    for row in new_csv:
+        writer.writerow(row)
 
-# print("Archivo CSV creado exitosamente en:", csv_file_path)
+print("Archivo CSV creado exitosamente en:", csv_file_path)
